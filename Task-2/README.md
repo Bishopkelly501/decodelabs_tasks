@@ -18,6 +18,17 @@ The system processes an image, applies image preprocessing techniques, detects c
 
 ## Technologies
 
+## Test Result
+
+The quality inspection program was tested using the sample inspection image.
+
+### Result
+- Inspection Result: FAIL
+- Defects Detected: 3
+
+The program successfully processed the image using grayscale conversion, Gaussian blur, thresholding, contour detection, and bounding boxes. The detected defects were highlighted with red bounding boxes in the inspection result.
+
+![Inspection Result](inspection_result.png)
 - Python
 - OpenCV
 
