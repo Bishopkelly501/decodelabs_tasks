@@ -1,7 +1,7 @@
 import cv2
 
 # Load the inspection image
-image = cv2.imread("sample_part.jpg")
+image = cv2.imread("test_image.jpg")
 
 if image is None:
     print("Error: Could not load the image.")
