@@ -1,6 +1,8 @@
 # Project 3: Autonomous Mobile Robot (AMR) Navigation
 
-This project implements a simulated Autonomous Mobile Robot (AMR) navigation system using Python.
+## Overview
+
+This project implements a simulated Autonomous Mobile Robot (AMR) navigation system.
 
 The system demonstrates:
 
@@ -11,7 +13,9 @@ The system demonstrates:
 - Dynamic obstacle detection
 - Automatic path re-planning
 
-The simulation demonstrates how a mobile robot can detect obstacles, represent its environment as an occupancy grid, plan a route to a goal, detect an unexpected obstacle, and calculate an alternative route.
+## Objective
+
+The objective is to simulate how a mobile robot can understand its environment, plan a route to a target location, detect an unexpected obstacle, and calculate an alternative route.
 
 ## Technologies
 
@@ -21,9 +25,41 @@ The simulation demonstrates how a mobile robot can detect obstacles, represent i
 - A* Search Algorithm
 - Manhattan Distance Heuristic
 
-## Test Result
+## How It Works
 
-The program was successfully tested.
+### 1. Simulated LiDAR
+
+The program simulates LiDAR measurements around the robot and detects nearby obstacles.
+
+### 2. Occupancy Grid
+
+The detected obstacles and static obstacles are represented in a 2D grid.
+
+The symbols used in the grid are:
+
+- `R` = Robot
+- `G` = Goal
+- `#` = Obstacle
+- `*` = Planned path
+- `.` = Free space
+
+### 3. A* Pathfinding
+
+The A* algorithm searches the occupancy grid for a route from the robot's starting position to the goal.
+
+The Manhattan distance is used as the heuristic.
+
+### 4. Dynamic Obstacle Handling
+
+An unexpected obstacle is introduced on the planned route.
+
+The robot stops safely, and the system runs A* again to calculate an alternative route.
+
+## Testing
+
+The program was successfully tested using the simulated environment.
+
+Test results:
 
 - LiDAR Mapping: SUCCESS
 - Occupancy Grid: SUCCESS
@@ -32,7 +68,25 @@ The program was successfully tested.
 - Dynamic Obstacle Detection: SUCCESS
 - Automatic Re-routing: SUCCESS
 
-The initial path contained 39 cells. After a dynamic obstacle was introduced, the system successfully calculated an alternative route.
+The initial path contained 39 cells, and the system successfully calculated an alternative route after the dynamic obstacle appeared.
+
+## Evidence
+
+### Occupancy Grid
+
+![Occupancy Grid](occupancy_grid.png)
+
+### A* Path Planning
+
+![A* Path](astar_path.png)
+
+### Dynamic Obstacle Avoidance
+
+![Obstacle Avoidance](obstacle_avoidance.png)
+
+### Final Result
+
+![Final Result](final_result.png)
 
 ## Internship
 
