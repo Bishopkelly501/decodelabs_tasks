@@ -1,0 +1,2 @@
+# Project 4 uses Python standard library modules.
+# No external Python packages are required.
